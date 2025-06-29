@@ -32,10 +32,10 @@ Alih-alih melakukan pelatihan ulang (*retraining*) model *deep learning*, peneli
 
 Dua dataset utama digunakan untuk pengujian dan validasi dalam penelitian ini.
 
-* [cite_start]**Le2i Fall Dataset:** Dataset publik standar untuk *benchmarking* sistem deteksi jatuh, berisi 130 video yang terdiri dari insiden jatuh dan aktivitas normal sehari-hari[cite: 1110, 1112].
+* **Le2i Fall Dataset:** Dataset publik standar untuk *benchmarking* sistem deteksi jatuh, berisi 130 video yang terdiri dari insiden jatuh dan aktivitas normal sehari-hari.
     * **[Unduh Dataset Le2i di Sini](https://drive.google.com/drive/folders/1NcEK32uX96QW_x_YPyBfRCOF33ZTxj8s?usp=drive_link)**
 
-* **Dataset Olahraga Matras:** Dataset kustom yang terdiri dari 130 video yang dikumpulkan untuk penelitian ini. Dataset ini secara spesifik berisi 9 jenis aktivitas olahraga matras (seperti *push-up*, *abdominal curl*, *bird dog*) yang rentan memicu alarm palsu. [cite_start]Seluruh video dalam dataset ini dikategorikan sebagai "Non-Fall"[cite: 1173, 1175].
+* **Dataset Olahraga Matras:** Dataset kustom yang terdiri dari 130 video yang dikumpulkan untuk penelitian ini. Dataset ini secara spesifik berisi 9 jenis aktivitas olahraga matras (seperti *push-up*, *abdominal curl*, *bird dog*) yang rentan memicu alarm palsu. Seluruh video dalam dataset ini dikategorikan sebagai "Non-Fall".
     * **[Unduh Dataset Olahraga Matras di Sini](https://drive.google.com/drive/folders/1zrMhEF3K0pOYBkKSMJCYBwKY6lhnPkMK?usp=drive_link)**
 
 ## 📊 Ringkasan Hasil Utama
