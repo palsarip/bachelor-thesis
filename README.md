@@ -12,7 +12,7 @@ Penelitian ini menjawab limitasi utama dalam sistem deteksi jatuh berbasis visi 
 
 ## 🎯 Latar Belakang Masalah dan Tujuan
 
-Referensi utama dari penelitian ini adalah jurnal **"Enhanced Fall Detection Using YOLOv7-W6-Pose for Real-Time Elderly Monitoring"** oleh Tîrziu, dkk.[cite: 1345]. Meskipun algoritma aslinya sangat efektif untuk deteksi jatuh secara umum, penelitian tersebut mengakui adanya limitasi pada skenario yang melibatkan gerakan-gerakan kompleks.
+Referensi utama dari penelitian ini adalah jurnal **"Enhanced Fall Detection Using YOLOv7-W6-Pose for Real-Time Elderly Monitoring"** oleh Tîrziu, dkk. Meskipun algoritma aslinya sangat efektif untuk deteksi jatuh secara umum, penelitian tersebut mengakui adanya limitasi pada skenario yang melibatkan gerakan-gerakan kompleks.
 
 Pengujian awal kami mengonfirmasi limitasi ini, di mana algoritma hasil replikasi hanya mencapai **akurasi 6.92%** pada dataset olahraga matras, karena salah mengklasifikasikan sebagian besar aktivitas sebagai jatuh.
 
