@@ -12,20 +12,20 @@ Penelitian ini menjawab limitasi utama dalam sistem deteksi jatuh berbasis visi 
 
 ## 🎯 Latar Belakang Masalah dan Tujuan
 
-[cite_start] Referensi utama dari penelitian ini adalah jurnal **"Enhanced Fall Detection Using YOLOv7-W6-Pose for Real-Time Elderly Monitoring"** oleh Tîrziu, dkk.[cite: 1345]. [cite_start]Meskipun algoritma aslinya sangat efektif untuk deteksi jatuh secara umum, penelitian tersebut mengakui adanya limitasi pada skenario yang melibatkan gerakan-gerakan kompleks[cite: 994, 1026].
+Referensi utama dari penelitian ini adalah jurnal **"Enhanced Fall Detection Using YOLOv7-W6-Pose for Real-Time Elderly Monitoring"** oleh Tîrziu, dkk.[cite: 1345]. Meskipun algoritma aslinya sangat efektif untuk deteksi jatuh secara umum, penelitian tersebut mengakui adanya limitasi pada skenario yang melibatkan gerakan-gerakan kompleks.
 
-[cite_start] Pengujian awal kami mengonfirmasi limitasi ini, di mana algoritma hasil replikasi hanya mencapai **akurasi 6.92%** pada dataset olahraga matras, karena salah mengklasifikasikan sebagian besar aktivitas sebagai jatuh[cite: 1236].
+Pengujian awal kami mengonfirmasi limitasi ini, di mana algoritma hasil replikasi hanya mencapai **akurasi 6.92%** pada dataset olahraga matras, karena salah mengklasifikasikan sebagian besar aktivitas sebagai jatuh.
 
 Tujuan utama dari skripsi ini adalah:
-1.  [cite_start ]Mengimplementasikan optimasi yang terarah pada algoritma acuan untuk secara signifikan mengurangi tingkat *false positive* pada skenario olahraga matras[cite: 999, 1007].
-2.  [cite_start] Mengukur peningkatan performa secara kuantitatif, baik pada kasus limitasi spesifik (olahraga matras) maupun pada dataset validasi umum (Le2i)[cite: 1008, 1010].
+1.  Mengimplementasikan optimasi yang terarah pada algoritma acuan untuk secara signifikan mengurangi tingkat *false positive* pada skenario olahraga matras.
+2.  Mengukur peningkatan performa secara kuantitatif, baik pada kasus limitasi spesifik (olahraga matras) maupun pada dataset validasi umum (Le2i).
 
 ## 🛠️ Pendekatan Optimasi
 
 Alih-alih melakukan pelatihan ulang (*retraining*) model *deep learning*, penelitian ini berfokus pada penyempurnaan logika pengambilan keputusan yang memproses *output* dari model YOLOv7-W6-Pose. Optimasi utama yang dilakukan meliputi:
 
-* [cite_start]**Penyesuaian Parameter:** Nilai ambang batas (*threshold*) utama seperti kecepatan, rasio aspek, dan sudut tubuh dibuat lebih ketat untuk mengurangi sensitivitas terhadap gerakan yang bukan jatuh[cite: 768].
-* **Logika Temporal dan Pemulihan (*Temporal & Recovery Logic*):** Sebuah mekanisme *stateful* baru diimplementasikan. Sistem kini mampu melacak urutan gerakan dan mengidentifikasi "event pemulihan" ketika pengguna kembali ke posisi normal setelah melakukan postur yang menyerupai jatuh. [cite_start]Jika beberapa *event* pemulihan terdeteksi, sistem secara cerdas mengklasifikasikan aktivitas tersebut sebagai olahraga, bukan insiden jatuh[cite: 1248, 1251].
+* **Penyesuaian Parameter:** Nilai ambang batas (*threshold*) utama seperti kecepatan, rasio aspek, dan sudut tubuh dibuat lebih ketat untuk mengurangi sensitivitas terhadap gerakan yang bukan jatuh.
+* **Logika Temporal dan Pemulihan (*Temporal & Recovery Logic*):** Sebuah mekanisme *stateful* baru diimplementasikan. Sistem kini mampu melacak urutan gerakan dan mengidentifikasi "event pemulihan" ketika pengguna kembali ke posisi normal setelah melakukan postur yang menyerupai jatuh. Jika beberapa *event* pemulihan terdeteksi, sistem secara cerdas mengklasifikasikan aktivitas tersebut sebagai olahraga, bukan insiden jatuh.
 * **Deteksi Lingkungan Kontekstual:** Sebuah model YOLOv7 standar diimplementasikan secara terpisah untuk mendeteksi objek yang umum ditemukan di area gym (misalnya, 'sports ball', 'bench'). Fitur ini memungkinkan logika deteksi jatuh untuk menjadi lebih ketat secara adaptif ketika sistem mengenali bahwa ia berada di lingkungan olahraga.
 
 ## 🗂️ Dataset
