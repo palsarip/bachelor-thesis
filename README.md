@@ -24,9 +24,7 @@ Tujuan utama dari skripsi ini adalah:
 
 Alih-alih melakukan pelatihan ulang (*retraining*) model *deep learning*, penelitian ini berfokus pada penyempurnaan logika pengambilan keputusan yang memproses *output* dari model YOLOv7-W6-Pose. Optimasi utama yang dilakukan meliputi:
 
-* **Penyesuaian Parameter:** Nilai ambang batas (*threshold*) utama seperti kecepatan, rasio aspek, dan sudut tubuh dibuat lebih ketat untuk mengurangi sensitivitas terhadap gerakan yang bukan jatuh.
 * **Logika Temporal dan Pemulihan (*Temporal & Recovery Logic*):** Sebuah mekanisme *stateful* baru diimplementasikan. Sistem kini mampu melacak urutan gerakan dan mengidentifikasi "event pemulihan" ketika pengguna kembali ke posisi normal setelah melakukan postur yang menyerupai jatuh. Jika beberapa *event* pemulihan terdeteksi, sistem secara cerdas mengklasifikasikan aktivitas tersebut sebagai olahraga, bukan insiden jatuh.
-* **Deteksi Lingkungan Kontekstual:** Sebuah model YOLOv7 standar diimplementasikan secara terpisah untuk mendeteksi objek yang umum ditemukan di area gym (misalnya, 'sports ball', 'bench'). Fitur ini memungkinkan logika deteksi jatuh untuk menjadi lebih ketat secara adaptif ketika sistem mengenali bahwa ia berada di lingkungan olahraga.
 
 ## 🗂️ Dataset
 
