@@ -42,13 +42,13 @@ Dua dataset utama digunakan untuk pengujian dan validasi dalam penelitian ini.
 
 Optimasi yang diimplementasikan menghasilkan peningkatan performa yang signifikan pada kedua dataset.
 
-| Dataset | Metrik | Sebelum Optimasi (Replikasi) | Setelah Optimasi (Final) | Hasil |
-| :--- | :--- | :--- | :--- | :--- |
-| **Olahraga Matras** | Akurasi | 6.92% | **38.46%** | ✅ Penurunan *False Positive* secara drastis. |
-| **Le2i Fall Dataset** | Akurasi | 92.31% | **96.15%** | ✅ Akurasi keseluruhan lebih tinggi. |
-| | Presisi | 98.90% | **100.00%** | 🎉 **Nol alarm palsu** pada dataset umum. |
-| | Recall | 90.91% | **94.95%** | ✅ Peningkatan sensitivitas, lebih sedikit kasus jatuh terlewat. |
-| | Skor F1 | 94.74% | **97.41%** | ✅ Keseimbangan dan performa model lebih baik. |
+| Dataset             | Metrik   | Sebelum Optimasi (Replikasi) | Setelah Optimasi (Final) | Hasil                                        |
+| :------------------ | :------- | :--------------------------- | :----------------------- | :------------------------------------------- |
+| **Olahraga Matras** | Akurasi  | 6.92%                        | **38.46%** | ✅ Penurunan *False Positive* secara drastis. |
+| **Le2i Fall Dataset** | Akurasi  | 92.31%                       | **96.15%** | ✅ Akurasi keseluruhan lebih tinggi.          |
+|                     | Presisi  | 98.90%                       | **100.00%** | 🎉 **Nol alarm palsu** pada dataset umum.      |
+|                     | Recall   | 90.91%                       | **94.95%** | ✅ Peningkatan sensitivitas, lebih sedikit kasus jatuh terlewat. |
+|                     | Skor F1  | 94.74%                       | **97.41%** | ✅ Keseimbangan dan performa model lebih baik. |
 
 ## 📁 Isi Repositori
 
@@ -58,9 +58,14 @@ Repositori ini mencakup:
 * `💻 Notebooks_Jupyter/`: Folder yang berisi dua *notebook* utama:
     * `yolov7-w6pose-replicate-v13.ipynb`: Kode untuk replikasi awal dari algoritma referensi.
     * `yolov7-w6-pose-exercise-v7-refactored.ipynb`: Kode yang berisi algoritma final yang telah dioptimasi dengan semua logika baru.
-* `🎥 Video_Hasil_Proses/`:
-    * **[Tautan akan segera ditambahkan - video sedang dalam proses unggah.]**
+* `🎥 Video_Hasil_Proses/`: Folder berisi video hasil pemrosesan dari kedua algoritma pada kedua dataset.
+    * **[Dataset Le2i (Sebelum Optimasi)](https://drive.google.com/drive/folders/1LIYMvd6KxrbBBm_fEkKYl06-pZWFdvIh?usp=sharing)**
+    * **[Dataset Le2i (Setelah Optimasi)](https://drive.google.com/drive/folders/1LIYMvd6KxrbBBm_fEkKYl06-pZWFdvIh?usp=sharing)**
+    * **[Dataset Olahraga Matras (Sebelum Optimasi)](https://drive.google.com/drive/folders/1ZsQQ0W0kUDz8sNXPny5LExQdnP7RcpIo?usp=sharing)**
+    * **[Dataset Olahraga Matras (Setelah Optimasi)](https://drive.google.com/drive/folders/1QJFKqJLMyemL6clR4HTnNf7nho70P4-p?usp=sharing)**
 
 ## CARA MENGUTIP
 
 Jika Anda menggunakan penelitian ini untuk pekerjaan Anda, silakan mengutip skripsi berikut:
+
+Syarif, M. N. (2025). *Optimasi Algoritma Deteksi Jatuh untuk Peningkatan Performa pada Kasus Olahraga Matras*. Skripsi Sarjana, Program Studi Informatika, Universitas Multimedia Nusantara, Tangerang.
